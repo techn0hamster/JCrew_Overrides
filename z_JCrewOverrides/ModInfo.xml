@@ -4,6 +4,8 @@
 		<Name value="z_JCrewOverrides" />
 		<Description value="Overrides for JCrew Server" />
 		<Author value="Techn0Hamster" />
-		<Version value="1.0.0" />
+		<Version value="1.0" />
+		<Website value="" />
 	</ModInfo>
 </xml>
+
