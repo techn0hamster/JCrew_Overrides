@@ -1,2 +1,2 @@
-# JCrew_Overrides
-this is the final Overrides for all mods on the server
+# 7D2D_Jcrew
+Collection of mods for private server of 7 Days to Die with some basic custom overrides.

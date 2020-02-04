@@ -1,0 +1,3 @@
+papawsSplodyBoomBoom,items,Gun,,,Papaws Splody Boom Boom (Ammo),,,,,,,,,,,,,
+papawsSplodyBoomBoomDesc,items,Gun,,,Papaws secret spoly boom. A mixture of...well something that goes boom.,,,,,,,,,,,,,
+papawsSplodyBoomBoomSchematic,items,Gun,,,Papaws Splody Boom Boom  Schematic,,,,,,,,,,,,,

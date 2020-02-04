@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+  <remove xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='seat0']" />  
+  <insertAfter xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='handlebars']">
+    <property class="seat0">
+      <!-- 0, .05, .98 -->
+      <!-- PErsonal Favorite
+      <property name="position" value="0, .45, .25"/>
+	<property name="rotation" value="25,0, 0"/>
+	<property name="exit" value="-1.3,0,.9 ~ 1.3,0,.9 ~ 0,0,-2.4 ~ 0,0,2.4 ~ 0,2,0"/>
+    </property>
+		X,Y,Z
+	
+	-->
+      <property name="position" value="0, .05, .98" />
+      <property name="rotation" value="-25, 0, 0" />
+      <property name="exit" value="-1.3,0,.9 ~ 1.3,0,.9 ~ 0,0,-2.4 ~ 0,0,2.4 ~ 0,2,0" />
+    </property>
+  </insertAfter>
+  <insertAfter xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='seat0']">
+    <property class="seat1">
+      <property name="position" value="0, -.45, .85" />
+      <property name="rotation" value="25,0, 0" />
+      <property name="exit" value="-1.3,0,.9 ~ 1.3,0,.9 ~ 0,0,-2.4 ~ 0,0,2.4 ~ 0,2,0" />
+    </property>
+  </insertAfter>
+  
+  <set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='force1']/@value">0, 0, .01</set>
+  
+  
+	<append xpath="vehicles/vehicle[@name='vehicleBicycle']">
+		<property class="seat1">
+			<!--0, .292, -.13-->
+			<property name="position" value="0, .392, -.63"/>
+			<property name="rotation" value="0, 0, 0"/>
+			<!---.8,0,0 ~ .8,0,0 ~ 0,0,-1.4 ~ 0,0,1.4 ~ 0,1.5,0-->
+			<property name="exit" value=".8,0,0 ~ -.8,0,0 ~ 0,0,1.4 ~ 0,0,-1.4 ~ 0,-1.5,0"/>
+		</property>
+	</append>
+	
+	
+	
+	<append xpath="vehicles/vehicle[@name='vehicleMotorcycle']">
+		<property class="seat1">
+			<!--0, 0, -.201-->
+			<property name="position" value="0, .1, -.701"/>
+			<property name="rotation" value="0, 0, 0"/>
+			<property name="exit" value=".9,0,0 ~ -.9,0,0 ~ 0,0,1.5 ~ 0,0,-1.6 ~ 0,-1.5,0"/>
+		</property>
+	</append>
+	
+	<append xpath="vehicles/vehicle[@name='vehicle4x4Truck']">
+		<property class="seat2">
+			<!---.4, .36, .06-->
+			<property name="position" value="-.4, .56, -2.46"/>
+			<property name="rotation" value="-25, 180, 0"/>
+			<property name="exit" value="-1.6,0,0 ~ 1.6,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+		</property>
+	</append>
+	
+	<append xpath="vehicles/vehicle[@name='vehicle4x4Truck']">
+		<property class="seat3">
+			<!--.4, .36, .06-->
+			<property name="position" value=".4, .56, -2.46"/>
+			<property name="rotation" value="-25, 180, 0"/>
+			<property name="exit" value="1.6,0,0 ~ -1.6,0,-1 ~ .4,0,-2.8 ~ .4,0,2.6 ~ .4,2.1,0"/>
+		</property>
+	</append>
+</configs>
