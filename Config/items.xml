@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+  <!-- T2 Salvage
+	<remove xpath="/items/item[@name='Pittsburgh Hand Axe']" />
+	<remove xpath="/items/item[@name='Pittsburgh Pickaxe']" />
+	<remove xpath="/items/item[@name='Pittsburgh Work Hammer']" />
+	<remove xpath="/items/item[@name='Pittsburgh Salvage Wrench']" />
+	<remove xpath="/items/item[@name='Pittsburgh Butcher Knife']" />
+	<remove xpath="/items/item[@name='Pittsburgh Hoe']" />
+	<remove xpath="/items/item[@name='Pittsburgh Machete']" />
+	 -->
+  <remove xpath="/items/item[@name = 'gunJunkTurret']/property[@class = 'Action0']/property[@name = 'Sound_repeat']" />
+  <append xpath="/items/item[@name = 'gunJunkTurret']/property[@class = 'Action0']">
+    <property name="Sound_loop" value="junkturret_fire" />
+  </append>
+  <append xpath="/items/item[@name = 'gunJunkTurret']/property[@name='Tags']/@value">,fireRate</append>
+  
+  
+  <append xpath="/items">
+    <item name="Jeremy's Salvage Wrench">
+      <!-- T2 Salvage -->
+      <property name="Tags" value="blunt,melee,grunting,light,tool,attPerception,perkSalvageOperations,canHaveCosmetic" />
+      <property name="DisplayType" value="melee" />
+      <property name="HoldType" value="29" />
+      <property name="CustomIcon" value="jeremysWrench" />      
+	  <property name="Meshfile" value="#@modfolder:Resources/HeavyWrench.unity3d?HeavyWrench_TH"/>
+      <property name="Material" value="Mmetal" />
+      <property name="RepairTools" value="resourceRepairKit" />
+      <property name="DegradationBreaksAfter" value="false" />
+      <property name="SoundJammed" value="ItemNeedsRepair" />
+      <property name="SoundDestroy" value="metaldestroy" />
+      <property name="EconomicValue" value="350" />
+      <property name="UnlockedBy" value="Jeremy's Salvage Wrench Schematic" />
+      <property name="ShowQuality" value="true" />
+      <property class="Action0">
+        <property name="Class" value="DynamicMelee" />
+        <property name="Sound_start" value="swoosh" />
+		
+        <property name="ToolCategory.harvestingTools" value=".5" param1="1" />
+        <property name="ToolCategory.Disassemble" value="1" param1="1" />
+		
+		
+        <property name="Sound_harvesting" value="wrench_harvest" />
+        <property name="Particle_harvesting" value="true" param1="metal" />
+        <property name="UseGrazingHits" value="true" />
+        <property name="GrazeStart" value=".25" />
+        <property name="GrazeEnd" value=".3" />
+        <property name="SwingDegrees" value="50" />
+        <property name="SwingAngle" value="180" />
+      </property>
+      <property class="Action1">
+        <property name="Class" value="DynamicMelee" />
+        <property name="Sound_start" value="swoosh" />
+        <property name="ToolCategory.harvestingTools" value=".5" param1="1" />
+        <property name="ToolCategory.Disassemble" value="1" param1="1" />
+        <property name="Sound_harvesting" value="wrench_harvest" />
+        <property name="Particle_harvesting" value="true" param1="metal" />
+      </property>
+      <effect_group name="meleeToolWrench">
+        <passive_effect name="EntityDamage" operation="base_set" value="24" />
+        <!-- meleeToolWrench -->
+        <passive_effect name="BlockDamage" operation="base_set" value="75" />
+        <passive_effect name="AttacksPerMinute" operation="base_set" value="40" />
+        <passive_effect name="StaminaLoss" operation="base_set" value="16.8" tags="primary" />
+        <passive_effect name="DegradationMax" operation="base_set" value="400,1500" tier="1,6" tags="perkSalvageOperations" />
+        <passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSalvageOperations" />
+        <passive_effect name="MaxRange" operation="base_set" value="2.4" />
+        <passive_effect name="BlockRange" operation="base_set" value="4" />
+        <passive_effect name="ModSlots" operation="base_set" value="1,1,3,4,4,5" tier="1,2,3,4,5,6" />
+        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage" />
+        <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue" />
+        <passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" />
+        <!-- random rng -->
+        <passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" />
+        <!-- tier bonus -->
+        <passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" />
+        <!-- random BlockDmg -->
+        <passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" />
+        <!-- tier bonus -->
+        <passive_effect name="DamageModifier" operation="perc_add" value=".25" tags="metal" />
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.25" tags="wood" />
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth" />
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.25" tags="stone" />
+		
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.25" tags="stone" />
+        <passive_effect name="HarvestCount" operation="base_set" value="1.1" tags="salvageHarvest" />
+		
+		
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" />
+		
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value=".15,2.5" tags="perkSalvageOperations" />
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value=".25" tags="carMaster2">
+			<requirement name="ProgressionLevel" progression_name="perkSalvageOperations" operation="GTE" value="5"/>
+		</passive_effect>
+		
+		
+		<!-- Don't Allow Harvest Points if Skill too Low-->
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="carMaster0">
+			<requirement name="ProgressionLevel" progression_name="perkSalvageOperations" operation="GTE" value="1"/>
+		</passive_effect>
+		
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="carMaster1">
+			<requirement name="ProgressionLevel" progression_name="perkSalvageOperations" operation="GTE" value="3"/>
+		</passive_effect>
+		
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="carMaster2">
+			<requirement name="ProgressionLevel" progression_name="perkSalvageOperations" operation="GTE" value="5"/>
+		</passive_effect>
+		
+		
+		
+      </effect_group>
+      <effect_group name="Power Attack">
+        <passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary" />
+        <passive_effect name="BlockDamage" operation="perc_add" value="3" tags="secondary" />
+        <passive_effect name="StaminaLoss" operation="base_add" value="30" tags="secondary" />
+        <passive_effect name="AttacksPerMinute" operation="base_add" value="-10" tags="secondary" />
+      </effect_group>
+      <property name="Group" value="Tools/Traps" />
+      <property name="RepairExpMultiplier" value="8.5" />
+    </item>
+    <!-- Schematics -->
+    <!-- Tools -->
+    <item name="Jeremy's Salvage Wrench Schematic">
+      <property name="Extends" value="schematicMaster" />
+      <property name="CreativeMode" value="Player" />
+      <property name="CustomIcon" value="Jeremy's Salvage Wrench" />
+      <property name="Unlocks" value="Jeremy's Salvage Wrench" />
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Jeremy's Salvage Wrench" operation="set" value="1" />
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50" />
+      </effect_group>
+    </item>
+    <item name="TurretController">
+      <!-- T2 demolitions (perk 5) -->
+      <property name="Tags" value="ammo,weapon" />
+      <property name="CustomIcon" value="thrownTimedCharge" />
+      <property name="DisplayType" value="ammoGrenadeTimedCharge" />
+      <property name="Class" value="ItemClassTimeBomb" />
+      <property name="HoldType" value="62" />
+      <property name="Meshfile" value="#Other/Items?Weapons/Ranged/TimedCharge/timedChargePrefab.prefab" />
+      <property name="DropScale" value="1.8" />
+      <property name="Material" value="Mmetal" />
+      <property name="Stacknumber" value="1" />
+      <property name="EconomicValue" value="400" />
+      <property name="Weight" value="0" />
+      <property name="Group" value="Ammo/Weapons" />
+      <property name="SoundUnholster" value="charge_unholster" />
+      <property class="Action0">
+        <property name="Class" value="DynamicMelee" />
+        <property name="Sound_start" value="charge_throw" />
+        <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98" />
+      </property>
+      <effect_group name="turretController">
+        <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffAddActiveTurret" />
+        <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffAddActiveTurret" />
+      </effect_group>
+    </item>
+	
+    <item name="papawsSplodyBoomBoom">
+      <!-- T2 demolitions (perk 5) -->
+      <property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert,miningExplosives" />
+      <property name="CustomIcon" value="papawBoomBoom" />
+      <property name="ItemTypeIcon" value="explosion" />
+      <property name="DisplayType" value="ammoGrenadeTimedCharge" />
+      <property name="Class" value="ItemClassTimeBomb" />
+	<property name="HoldType" value="20"/>	
+	  <!--<property name="Meshfile" value="#@modfolder:Resources/PapawBarrel.unity3d?Papaw_Barrel"/>
+	  <property name="Meshfile" value="#@modfolder:Resources/HeavyWrench.unity3d?HeavyWrench_TH"/> -->
+	  <property name="Meshfile" value="#@modfolder:Resources/PapawBarrel.unity3d?PapawBarrel"/>
+	  <property name="UnlockedBy" value="perkDemolitionsExpert"/>
+      <property name="DropScale" value="1.8" />
+      <property name="Material" value="Mmetal" />
+      <property name="Stacknumber" value="25" />
+      <property name="EconomicValue" value="41" />
+      <property name="Weight" value="0" />
+      <property name="Explosion.DamageBonus.tags" value="38" />
+      <property name="Explosion.ParticleIndex" value="12" />
+      <property name="Explosion.RadiusBlocks" value="3" />
+      <property name="Explosion.RadiusEntities" value="1" />
+      <property name="Explosion.DamageBonus.stone" value="1.5" />
+      <property name="Explosion.DamageBonus.metal" value="1.5" />
+      <property name="Explosion.DamageBonus.earth" value="1.5" />
+      <!-- should work? -->
+      <property name="Explosion.DamageBonus.wood" value="1.5" />
+      <property name="Explosion.DamageBonus.water" value="0" />
+      <property name="Explosion.BlastPower" value="75" />
+      <!-- (int,100) how far ragdolls and such are flung -->
+      <property name="FuseStartOnDrop" value="true" />
+      <property name="FuseTime" value="4"  />
+      <!-- End: Needed for  time in sec, max 6 -->
+      <property name="StickPercent" value="1" />	  
+      <property name="Group" value="Ammo/Weapons" />
+      <property name="SoundUnholster" value="charge_unholster" />
+      <property name="SoundStick" value="charge_stick" />
+      <property name="SoundTick" value="charge_beep,1" />
+      <property class="Action0">
+        <property name="Class" value="ThrowAway" />
+        <property name="Delay" value="1.2" />
+        <property name="Throw_strength_default" value="15" />
+        <property name="Max_strain_time" value="0" />
+        <property name="Sound_start" value="charge_throw" />
+        <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98" />
+      </property>
+      <property name="ThrowableDecoy" value="true" />
+      <effect_group tiered="false">
+		<passive_effect name="BlockDamage" operation="base_set" value="3000"/>
+		<display_value name="dExDamageBlock" value="3000"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="550"/>
+		<display_value name="dExDamageEntity" value="500"/>
+		<display_value name="dExRadius" value="6"/>
+		<display_value name="dFuseTime" value="4"/>		
+        <passive_effect name="HarvestCount" operation="base_set" value="2.5" tags="miningExplosives" />
+		<triggered_effect name="onProjectileImpact" action="AddBuff" target="positionAOE" range="5" buff="buffInjuryKnockdown01"/>
+	</effect_group>
+    </item>
+  </append>
+  <!-- RussianD00d a17 coversion Mod -->
+  <!--
+	=======================================================================================================
+	Adds Dismember to Hunting Knife
+	=======================================================================================================
+	-->
+  <append xpath="/items/item[@name='meleeToolKnifeIron']/effect_group[@name='meleeToolKnifeIron']">
+    <passive_effect name="DismemberChance" operation="base_add" value=".03" tags="primary" />
+  </append>
+  <append xpath="/items/item[@name='meleeToolKnifeIron']/effect_group[@name='Power Attack']">
+    <passive_effect name="DismemberChance" operation="base_add" value=".03" tags="secondary" />
+  </append>
+  <!--
+	=======================================================================================================
+	Adds Dismember to Machete
+	=======================================================================================================
+	-->
+  <append xpath="/items/item[@name='meleeToolKnifeMachete']/effect_group[@name='meleeToolKnifeMachete']">
+    <passive_effect name="DismemberChance" operation="base_add" value=".08" tags="primary" />
+  </append>
+  <append xpath="/items/item[@name='meleeToolKnifeMachete']/effect_group[@name='Power Attack']">
+    <passive_effect name="DismemberChance" operation="base_add" value=".08" tags="secondary" />
+  </append>
+  <!--
+=======================================================================================================
+=============================================NEW ITEMS=================================================
+=======================================================================================================
+-->
+  <!-- think about adding high headshot on Rifles, low on pistols, high < range on shotguns? -->
+  <remove xpath="/items/item[contains(@name, 'ammo')]/effect_group/passive_effect[@name='DamageModifier' and @tags='head']" />
+  <remove xpath="/items/item[contains(@name, 'ammo')]/effect_group/passive_effect[@name='DismemberChance' and @tags='head']" />
+  <append xpath="/items/item[contains(@name, 'ammo')]/effect_group[1]">
+    <passive_effect name="DismemberChance" operation="perc_add" value=".3" tags="head" />
+  </append>
+  <append xpath="/items/item[contains(@name, 'ammo')]/effect_group[1]">
+    <passive_effect name="DamageModifier" operation="perc_add" value="1.0" tags="head" />
+  </append>
+  <append xpath="/items/item/property[@name='Tags' and contains(@value, 'melee')]/../effect_group[1]">
+    <passive_effect name="DamageModifier" operation="perc_add" value=".5" tags="head" />
+  </append>
+</configs>
