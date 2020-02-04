@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<xml>
 		<ModInfo>
-			<Name value="zJcrew_Private_Overrides"/>
+			<Name value="z_JCrewOverrides"/>
 			<Description value="Overrides for JCrew Server"/>
 			<Author value="JCrew"/>
 			<Version value="A18"/>
