@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Servers>
+       <ServerGroup Name="Testing" Logo="" Description="">
+               <Server Name="MyTestMod" Logo="">
+                       <Description>
+                       This is for the JCrew Server
+                       </Description>
+                       <DownloadMode>Clone</DownloadMode>
+                       <SubscriptionLink>https://raw.githubusercontent.com/techn0hamster/JCrew_Overrides/master/jcrew_profiles.txt</SubscriptionLink>
+                       <Version>Latest</Version>
+                       <ReleaseNotes/>
+                       <Downloads>
+                       <Download>https://gitlab.com/Techn0Hamster/jcrew-server</Download>
+                 <Downloads>
+               </Server>
+       </ServerGroup>
+</Servers>
