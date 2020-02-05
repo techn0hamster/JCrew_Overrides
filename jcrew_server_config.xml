@@ -12,8 +12,8 @@
                        <ReleaseNotes/>
                        <Downloads>					   
 					    <Download>https://github.com/techn0hamster/JCrew_Overrides</Download>
-					     <Download>https://github.com/techn0hamster/JCrew-Updated-Mods/archive/master.zip</Download>
-					     <Download>https://gitlab.com/Techn0Hamster/jcrew-server/-/archive/master/jcrew-server-master.zip</Download>
+					     <Download>https://github.com/techn0hamster/JCrew-Updated-Mods</Download>
+					     <Download>https://gitlab.com/Techn0Hamster/jcrew-server</Download>
                  </Downloads>
                </Server>
        </ServerGroup>
