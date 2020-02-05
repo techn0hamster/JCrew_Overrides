@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Servers>
-       <ServerGroup Name="Testing" Logo="" Description="">
-               <Server Name="MyTestMod" Logo="">
+       <ServerGroup Name="Jcrew" Logo="" Description="">
+               <Server Name="Jcrew Default" Logo="">
                        <Description>
                        This is for the JCrew Server
                        </Description>
+					   <RSS>https://github.com/techn0hamster/JCrew_Overrides/commits/master.atom</RSS>
                        <DownloadMode>Clone</DownloadMode>
                        <SubscriptionLink>https://raw.githubusercontent.com/techn0hamster/JCrew_Overrides/master/jcrew_profiles.txt</SubscriptionLink>
                        <Version>Latest</Version>
                        <ReleaseNotes/>
                        <Downloads>
-                       <Download>https://gitlab.com/Techn0Hamster/jcrew-server</Download>
+                       <Download>https://github.com/techn0hamster/JCrew_Overrides/archive/master.zip</Download>
+					   <Download>https://gitlab.com/Techn0Hamster/jcrew-server/-/archive/master/jcrew-server-master.zip</Download>
+					   
                  </Downloads>
                </Server>
        </ServerGroup>
