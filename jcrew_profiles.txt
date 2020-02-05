@@ -1,1 +1,2 @@
 https://github.com/techn0hamster/JCrew_Overrides/tree/master/z_JCrewOverrides
+https://gitlab.com/Techn0Hamster/jcrew-server
