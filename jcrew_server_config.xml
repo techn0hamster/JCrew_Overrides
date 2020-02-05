@@ -10,9 +10,10 @@
                        <SubscriptionLink>https://gitlab.com/Techn0Hamster/jcrew-server</SubscriptionLink>
                        <Version>Latest</Version>
                        <ReleaseNotes/>
-                       <Downloads>
-                       <Download>https://github.com/techn0hamster/JCrew_Overrides/archive/master.zip</Download>
-					   
+                       <Downloads>					   
+					    <Download> https://github.com/techn0hamster/JCrew_Overrides/archive/master.zip</Download>
+					     <Download>https://github.com/techn0hamster/JCrew-Updated-Mods/archive/master.zip</Download>
+					     <Download>https://gitlab.com/Techn0Hamster/jcrew-server/-/archive/master/jcrew-server-master.zip</Download>
                  </Downloads>
                </Server>
        </ServerGroup>
