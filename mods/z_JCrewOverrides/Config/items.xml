@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <configs>
-  <!-- T2 Salvage
-	<remove xpath="/items/item[@name='Pittsburgh Hand Axe']" />
-	<remove xpath="/items/item[@name='Pittsburgh Pickaxe']" />
-	<remove xpath="/items/item[@name='Pittsburgh Work Hammer']" />
-	<remove xpath="/items/item[@name='Pittsburgh Salvage Wrench']" />
-	<remove xpath="/items/item[@name='Pittsburgh Butcher Knife']" />
-	<remove xpath="/items/item[@name='Pittsburgh Hoe']" />
-	<remove xpath="/items/item[@name='Pittsburgh Machete']" />
-	 -->
+
   <remove xpath="/items/item[@name = 'gunJunkTurret']/property[@class = 'Action0']/property[@name = 'Sound_repeat']" />
   <append xpath="/items/item[@name = 'gunJunkTurret']/property[@class = 'Action0']">
     <property name="Sound_loop" value="junkturret_fire" />
