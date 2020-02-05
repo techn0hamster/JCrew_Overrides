@@ -7,7 +7,7 @@
                        </Description>
 					   <RSS>https://github.com/techn0hamster/JCrew_Overrides/commits/master.atom</RSS>
                        <DownloadMode>Clone</DownloadMode>
-                       <SubscriptionLink>https://raw.githubusercontent.com/techn0hamster/JCrew_Overrides/master/jcrew_profiles.txt</SubscriptionLink>
+                       <SubscriptionLink>https://gitlab.com/Techn0Hamster/jcrew-server</SubscriptionLink>
                        <Version>Latest</Version>
                        <ReleaseNotes/>
                        <Downloads>
