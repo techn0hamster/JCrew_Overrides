@@ -3,7 +3,7 @@
        <ServerGroup Name="Jcrew" Logo="" Description="">
                <Server Name="Jcrew Default" Logo="">
                        <Description>
-                       This is for the JCrew Server
+                       This is for the JCrew Server - 40.112.54.19
                        </Description>
 					   <RSS>https://github.com/techn0hamster/JCrew_Overrides/commits/master.atom</RSS>
                        <DownloadMode>Clone</DownloadMode>
