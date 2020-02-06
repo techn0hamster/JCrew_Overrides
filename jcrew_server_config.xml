@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Servers>
+       <ServerGroup Name="Jcrew" Logo="" Description="">
+               <Server Name="Jcrew Default" Logo="">
+                       <Description>
+                       This is for the JCrew Server - 40.112.54.19
+                       </Description>
+					   <RSS>https://github.com/techn0hamster/JCrew_Overrides/commits/master.atom</RSS>
+                       <DownloadMode>Clone</DownloadMode>
+                       <Version>Latest</Version>
+                       <ReleaseNotes/>
+					   <SubscriptionList>https://raw.githubusercontent.com/7D2DMods/Profiles/master/MyTestProfile.txt</SubscriptionList>
+                       <Downloads>					   
+					     <Download>https://github.com/techn0hamster/JCrew_Overrides/</Download>
+						 <Download>https://gitlab.com/Techn0Hamster/jcrew-server</Download>
+                 </Downloads>
+               </Server>
+       </ServerGroup>
+</Servers>
