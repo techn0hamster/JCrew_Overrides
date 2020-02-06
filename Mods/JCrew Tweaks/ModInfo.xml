@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
 	<ModInfo>
-		<Name value="z_JCrewOverrides" />
-		<Description value="Overrides for JCrew Server" />
+		<Name value="JCrew Tweaks" />
+		<Description value="Tweaks to other mods for JCrew Server" />
 		<Author value="Techn0Hamster" />
 		<Version value="1.0" />
 		<Website value="" />
