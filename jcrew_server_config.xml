@@ -11,8 +11,7 @@
                        <ReleaseNotes/>
 					   <SubscriptionList>https://raw.githubusercontent.com/7D2DMods/Profiles/master/MyTestProfile.txt</SubscriptionList>
                        <Downloads>					   
-					    <Download>https://github.com/techn0hamster/JCrew_Overrides</Download>
-					     <Download>https://github.com/techn0hamster/JCrew-Updated-Mods</Download>
+					     <Download>https://github.com/7D2DMods/Mods</Download>
                  </Downloads>
                </Server>
        </ServerGroup>
